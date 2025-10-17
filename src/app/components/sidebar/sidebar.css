@@ -1,0 +1,11 @@
+:host {
+  height: 100%; /* Ocupa 100% da altura */
+}
+
+:host(.expanded) {
+  width: 20%; /* Largura quando expandido */
+}
+
+:host(.collapsed) {
+  width: 5%; /* Largura quando recolhido */
+}

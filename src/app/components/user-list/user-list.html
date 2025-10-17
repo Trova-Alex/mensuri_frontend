@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  @for (patient of patients; track $index) {
+    <div (click)="onUserClick(patient)" class="cursor-pointer bg-white shadow rounded p-4 hover:shadow-lg transition">
+      <h3 class="text-lg font-bold">
+        {{ patient.userProfile?.firstName }} {{ patient.userProfile?.lastName }}
+      </h3>
+      <p class="text-sm text-gray-600">
+        Email: {{ patient.userProfile?.email }}
+      </p>
+    </div>
+  }
+</div>

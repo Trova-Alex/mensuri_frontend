@@ -1,0 +1,15 @@
+<div class="bg-white shadow rounded-lg p-4 flex flex-col items-start justify-center w-50">
+  <div class="flex items-center gap-2 mb-2">
+    <span class="text-indigo-500 text-xl">{{ icon }}</span>
+    <h3 class="text-sm font-medium text-gray-700">{{ title }}</h3>
+  </div>
+
+  <p class="text-lg font-bold text-gray-900">
+    {{ value }} 
+    @if (unit) { <span class="text-xs font-normal">{{ unit }}</span> }
+  </p>
+  <div class="p-2 flex flex-col">
+    <span class="text-xs text-gray-500">Última atualização:</span>
+    @if (lastUpdate) { <time class="text-xs text-gray-500">{{ lastUpdate }}</time> }
+  </div>
+</div>

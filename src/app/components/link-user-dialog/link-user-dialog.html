@@ -1,0 +1,25 @@
+
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800/80 bg-opacity-50 z-50">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-96">
+    <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Vincular paciente</h2>
+
+    <label class="block text-sm mb-2 text-gray-700 dark:text-gray-300">Email do Paciente</label>
+    <input
+      [(ngModel)]="email"
+      type="text"
+      class="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 mb-4 text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 outline-none"
+      placeholder="Digite o email do paciente..." />
+
+    <div class="flex justify-end mt-4 gap-3">
+      <button (click)="closeDialog()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-100 hover:bg-gray-300">
+        Cancelar
+      </button>
+      <button
+        (click)="confirm()"
+        [disabled]="loading"
+        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50">
+        {{ loading ? 'Vinculando...' : 'Confirmar' }}
+      </button>
+    </div>
+  </div>
+</div>

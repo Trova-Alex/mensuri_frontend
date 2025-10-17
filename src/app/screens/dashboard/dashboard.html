@@ -1,0 +1,9 @@
+<div class="flex h-screen bg-gray-100">
+  <div class="flex-1 p-6 overflow-y-auto">
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+    <div class="p-6 bg-gray-100  min-h-screen">
+        <h1 class="text-2xl font-bold mb-4">Pacientes vinculados</h1>
+        <app-user-list [patients]="patients" (selectUser)="openUser($event)"></app-user-list>
+    </div>
+  </div>
+</div>
